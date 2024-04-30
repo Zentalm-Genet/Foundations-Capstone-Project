@@ -47,6 +47,7 @@ const startTask = (taskId, startButton) => {
         startButton.textContent = "In Progress";
         const title = taskCard.querySelector(".task-title").textContent.trim();
         updateTask(taskId, "In Progress", currentTime, title, description, priority, taskCode);
+        
         taskStarted[taskId] = currentTime;
     } else if (startButton.textContent === "In Progress") {
         if (durationInSeconds < 3) {
