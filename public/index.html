@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskMaster - airlines maintenance task app</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+      <div class="menu-icon" onclick="toggleNav()">
+        ☰
+      </div>
+      <h2>Task Manager App</h2>
+      <form action="#" class="search">
+        <input type="text" id="search-input" placeholder="Search.....">
+        <button id="search-button">Search</button>
+      </form>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <nav>
+        <div class="profile-card" id="profileCard">
+          <img src="/public/images/profile.png" alt="Profile" class="profile">
+          <p>Zentalm G</p>
+        </div>
+        <div class="edit-form" id="editForm" style="display: none;">
+          <form id="profileForm">
+            <input type="file" id="imageInput" accept="image/*">
+            <input type="text" id="usernameInput" placeholder="Enter name">
+            <button type="submit">Save</button>
+          </form>
+        </div>
+        
+        <ul>
+          <li><a href="#" id="task-list-link">All Tasks</a></li>
+          <li><a href="#" id="task-complete-link">Completed Tasks</a></li>
+          <li><a href="#" id="task-creation-link">Task Creation</a></li>   
+          <li><a href="login.html" id="logout-link">Log Out</a></li>     
+        </ul>
+    </nav>
+    <!-- Sub Main Content Section -->
+    <section class="sub-main">
+        <div class="task-header">
+          <h3></h3>
+          <button id="add-button">+</button>
+        </div>
+      <section id="task-list">
+          <h2>All Tasks</h2>
+          <div id="task-list-info">
+            <!-- Task list will be dynamically added here -->
+          </div>
+    </section>
+    <section id="task-complete">
+          <h2>Completed Tasks</h2>
+          <div id="task-complete-info">
+              <!-- Completed tasks will be dynamically added here -->
+          </div>
+    </section>
+    <section id="task-creation">
+          <h2>Task Creation</h2>
+          <form id="task-creation-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required placeholder="Please Enter Task Title...">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="5" required placeholder="Please Enter Task Description..."></textarea>
+            <div class="horizontal-layout">
+                  <div class="form-group">
+                    <label for="due-date">Due Date:</label>
+                    <input type="date" id="due-date" name="due-date" required>
+                  </div>
+              <div class="form-group form-priority">
+                    <label for="priority">Priority:</label>
+                    <select id="priority" name="priority" required>
+                    <option value="low">Low</option>
+                    <option value="medium">Medium</option>
+                    <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                  <label for="taskCode">Task Code:</label>
+                  <input type="text" id="taskCode" name="taskCode" required placeholder="Please Enter Task Code...">
+                </div>
+              </div>
+            <button type="submit" class="taskCreateBtn">Create Task</button>
+        </form>
+      </section>
+    <div id="custom-alert" class="custom-alert">
+      <div class="custom-alert-content">
+          <h1>Information</h1> <br>
+          <h3 id="custom-alert-message"></h3>
+          <hr> <br>
+          <button id="custom-alert-okay">OK</button>
+      </div> 
+  </main>
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2024 TaskMaster. All rights reserved.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="profile.js"></script>
+  <script src="navegtion.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

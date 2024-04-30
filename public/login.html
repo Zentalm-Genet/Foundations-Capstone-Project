@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: azure;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #36454F;
+            max-width: 600px;
+            padding: 20px;
+            color: #f1f1f1;
+            margin-top: -12rem; 
+            border-radius: 10px;
+        }
+        h2 {
+             text-align: center; 
+            }
+
+        input[type=text], input[type=password] {
+            max-width: 100%;
+            padding: 6px 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        button {
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+            background-color: #385170;
+    
+        }
+
+        button:hover {
+            background-color: #3869a3;
+            transform: translateY(-2px);
+            opacity: 0.8;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        a:hover {
+            text-decoration: underline; 
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" id="loginButton">Login</button>
+        </form>
+        <a href="signup.html">Sign Up</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="login.js"></script>
+    <script src="auth.js"></script>
+</body>
+</html>
